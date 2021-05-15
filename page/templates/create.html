@@ -1,0 +1,29 @@
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+
+   <!-- 지원자 이름:  <input type="text" name="name"><br><br>
+    나이 : <input type="text" name="age"><br><br>
+    성별 :  -->
+    <!-- 
+        라디오버튼 활성화 시키기
+        <input type="radio" name="gender" value="">
+    <label for="female">여성</label>
+    <input type="radio" name="gender" value="">
+    <label for="male">남성</label> -->
+   
+    <br><br>
+    <!-- 소개 : <textarea name="introduce"></textarea> 
+    <br> -->
+    <br>
+    <input type="submit" value="제출">
+
+
+
+</form>

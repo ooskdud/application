@@ -1,0 +1,20 @@
+{% load static %}
+
+<style>
+    * {text-align:center;}
+</style>
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<h2> {{human_detail.name}} </h2><br>
+<p>나이 : {{human_detail.age}}</p> 
+<!-- <p>성별 : {{human_detail.gender}}</p> -->
+<p>소개 : {{human_detail.introduce}}</p>
+<small>{{human_detail.pub_date}}</small>
+
+<br>
+<a href="{% url 'update' human_detail.id %}">수정</a>
+<a href="{% url 'delete' human_detail.id%}">삭제</a>
+<br><br>
+<a href="{% url 'home' %}"> <h3>목록</h3></a>

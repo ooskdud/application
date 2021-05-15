@@ -1,0 +1,19 @@
+{% load static %}
+
+<style>
+    * {text-align:center;}
+
+</style>
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<h1>지원서 페이지</h1>
+{% for human in humans.all %}
+    <a href="{% url 'detail' human.id %}"><h2>{{human.name}} </h2></a>
+    
+{% endfor %}
+
+<a href="{% url 'create'%}"> >> 지원하기 </a>
+
