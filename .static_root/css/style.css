@@ -1,3 +1,32 @@
 *{
     text-align: center;
 }
+
+.title{
+    display: inline-block;
+    margin: 30px 100px;
+    width: 400px;
+    background-color: rgb(231, 255, 236);
+    color: rgb(0, 0, 0);
+    border-radius: 15px;
+
+}
+
+.home{
+    background-color: rgb(91, 126, 83);
+    height: 700px;
+}
+
+.human{
+    background-color: white;
+    margin: 50px 200px;
+    padding: 50px;
+    border-radius: 15px;
+    
+}
+.fix{
+    top: 450px;
+    left: 1000px;
+    position: fixed;
+    width: 150px;
+}

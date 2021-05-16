@@ -17,7 +17,7 @@ def create(request,human_id):
         form = CreateForm(request.POST)
         if form.is_valid():
             human = form.save(commit=False)
-            # human.gender = request.POST['gender']
+            human.gender = request.POST['gender']
             human.save()
         return redirect('/detail/'+str(human.id))
     else:
