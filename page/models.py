@@ -5,7 +5,6 @@ from django.utils import timezone
 class Application(models.Model):
     name = models.CharField(max_length=100)
     age = models.CharField(max_length=100)
-    gender = models.CharField(max_length=100)
     introduce = models.TextField()
     pub_date = models.DateTimeField('date published', default = timezone.now)
 
