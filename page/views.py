@@ -22,7 +22,7 @@ def create(request):
         return redirect('/detail/'+str(human.id))
     else:
         form = CreateForm()
-    return render(request, 'create.html', {'form': form})
+        return render(request, 'create.html', {'form': form})
 
 def update(request,human_id):
     human = Application.objects.get(id=human_id)
