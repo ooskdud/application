@@ -2,7 +2,8 @@
     text-align: center;
 }
 
-.title{
+.header{
+    display: grid;
     display: inline-block;
     margin: 30px 100px;
     width: 400px;
@@ -11,13 +12,22 @@
     border-radius: 15px;
 
 }
+.sidebar{
+    display: grid;
+    grid-template-areas:
+    
 
-.home{
-    background-color: rgb(62, 65, 62);
-    height: 700px;
+}
+
+.it1{
+    grid-area: it1;
+}
+.it2{
+    grid-area: it2;
 }
 
 .human{
+    display: grid;
     background-color: white;
     margin: 50px 200px;
     padding: 50px;

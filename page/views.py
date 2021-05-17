@@ -12,11 +12,12 @@ def detail(request,human_id):
     human_detail = get_object_or_404(Application, pk=human_id)
     return render(request, 'detail.html', {'human_detail':human_detail})
 
-def create(request,human_id):
+def create(request):
     if request.method == 'POST':
-        form = CreateForm(request.POST)
+        form = CreateForm(request.POST, request.FILES)
         if form.is_valid():
             human = form.save(commit=False)
+            human.pub_date = timezone.datetime.now()
             human.save()
         return redirect('/detail/'+str(human.id))
     else:
@@ -26,7 +27,7 @@ def create(request,human_id):
 def update(request,human_id):
     human = Application.objects.get(id=human_id)
     if request.method =="POST":
-        form = CreateForm(request.POST, instance=human)
+        form = CreateForm(request.POST, request.FILES, instance=human)
         if form.is_valid():
             human = form.save()
         return redirect('/detail/'+str(human.id))

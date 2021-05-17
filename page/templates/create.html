@@ -4,16 +4,14 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
-<form action="" method="POST">
+<form action="" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
-    {{form.as_p}}
-
-  
-   
+    {{form.as_p}}   
     <br><br>
     <!-- 소개 : <textarea name="introduce"></textarea> 
     <br> -->
     <br>
+    
     <input type="submit" value="제출">
 
 
