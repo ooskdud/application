@@ -35,6 +35,7 @@ def update(request,human_id):
         form = CreateForm(instance=human)
         return render(request, 'create.html', {'form':form})
 
+
 def delete(request,human_id):
     human = Application.objects.get(id=human_id)
     human.delete()

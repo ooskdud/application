@@ -12,10 +12,11 @@
     border-radius: 15px;
 
 }
-.sidebar{
-    display: grid;
-    grid-template-areas:
-    
+.container{
+    /* display: grid; */
+    /* grid-template-areas: */
+    flex-direction: row;
+    justify-content: flex-start;
 
 }
 
@@ -28,11 +29,15 @@
 
 .human{
     display: grid;
-    background-color: white;
-    margin: 50px 200px;
-    padding: 50px;
-    border-radius: 15px;
-    
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-auto-columns: minmax(100px, auto); */
+
+}
+
+.h{
+    /* grid-auto-columns: minmax(100px, auto); */
+
 }
 .fix{
     top: 450px;
