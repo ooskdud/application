@@ -3,15 +3,17 @@
 }
 
 .header{
-    display: grid;
-    align-content: center;
-    margin: 30px 100px;
+    /* display: flex; */
+    /* justify-content: center; */
+    text-align: center;
+    margin: auto;
     width: 400px;
     background-color: rgb(238, 247, 240);
     color: rgb(0, 0, 0);
     border-radius: 15px;
-
 }
+ 
+
 /* .container{
     display: grid;
     grid-template-rows: 1fr 1fr;

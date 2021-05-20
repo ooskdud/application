@@ -5,8 +5,7 @@
 </head>
 
 <div class="header">
-    <h1>지원서 페이지</h1>
-
+        <h1>지원서 페이지</h1>
 </div>
 
 <!-- <div class="container">
@@ -18,7 +17,7 @@
     {% for human in humans.all %}
 
        <div class="h"> 
-            <img src="{{ humans.image.url }}" width="100px" height="100px">
+            <img src="{{ human.image.url }}" width="100px" height="100px">
            
             <a href="{% url 'detail' human.id %}"><h3>{{human.name}} </h3></a> 
            <br> 나이 : {{human.age}}
