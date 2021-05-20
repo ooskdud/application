@@ -9,19 +9,19 @@
 
 </div>
 
-<div class="container">
-    <div class="it1"> <h3>지원자</h3></div> </div>
+<!-- <div class="container">
+    <div class="it1"> <h3>지원자</h3></div> 
     <div class="it2"> <h3>합격자</h3></div>
-</div>
+</div> -->
 
 <div class="human">
     {% for human in humans.all %}
 
        <div class="h"> 
-            <img src="{{humans.image.url}}" width="100px" height="100px">
+            <img src="{{ humans.image.url }}" width="100px" height="100px">
            
             <a href="{% url 'detail' human.id %}"><h3>{{human.name}} </h3></a> 
-            나이 : {{human.age}}
+           <br> 나이 : {{human.age}}
             <br>
             <a href="{% url 'update' human.id %}">수정</a>
             <a href="{% url 'delete' human.id%}">삭제</a>

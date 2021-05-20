@@ -10,7 +10,9 @@
 <h2> {{human_detail.name}} </h2><br>
 <p>나이 : {{human_detail.age}}</p> 
 <p>소개 : {{human_detail.introduce}}</p>
-<small>{{human_detail.pub_date}}</small>
+<br><br>
+<small>{{human_detail.pub_date}}</small> 
+<!-- 날짜는 오른쪽 아래에 배치 -->
 
 {% if human_detail.image %}
 <img src="{{human_detail.image.url}}" alt="" width="300px" height="300px">
